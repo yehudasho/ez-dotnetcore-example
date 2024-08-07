@@ -18,7 +18,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	// Get the absolute path to the index.html file
 	dir, err := os.Getwd()
 	if err != nil {
-		http.Error(w, "Failed to get current working directory", http.StatusInternalServerError)
+		http.Error(w, "Failed to get current working directory please fix", http.StatusInternalServerError)
 		return
 	}
 	htmlPath := filepath.Join(dir, "index.html")
